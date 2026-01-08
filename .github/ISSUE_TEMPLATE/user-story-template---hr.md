@@ -1,6 +1,6 @@
 ---
 name: User story template - HR
-about: User story template - HR
+about: User story template
 title: ''
 labels: ''
 assignees: ''
@@ -8,4 +8,4 @@ assignees: ''
 ---
 
 **User Story**  
-As a HR, I want so that .
+As a enrollment officer/HR, I want so that .
