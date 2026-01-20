@@ -1,0 +1,34 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+logs/
+*.log
+
+# Database
+*.mdf
+*.ldf
+*.ndf
+
+# Environment variables
+.env
+.env.local
+
+# App settings
+appsettings*.json
+# Node modules (if using npm for frontend)
+node_modules/

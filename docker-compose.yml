@@ -1,0 +1,30 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: school-onboarding-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "SchoolDB@2024!"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    networks:
+      - school-network
+    healthcheck:
+      test: [
+        "CMD",
+        "/opt/mssql-tools18/bin/sqlcmd",
+        "-S", "localhost",
+        "-U", "sa",
+        "-P", "SchoolDB@2024!",
+        "-C",
+        "-Q", "SELECT 1"
+      ]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+networks:
+  school-network:
+    driver: bridge
